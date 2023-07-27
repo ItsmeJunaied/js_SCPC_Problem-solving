@@ -1,12 +1,11 @@
 // Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
-const bubble_sort = (arr) => {
-    const n = arr.length;
+const second_smallest = (arr) => {
     let swapped;
 
     do {
         swapped = false;
-        for (let i = 0; i < n - 1; i++) {
+        for (let i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
                 const temp = arr[i];
                 arr[i] = arr[i + 1];
@@ -19,5 +18,5 @@ const bubble_sort = (arr) => {
     return arr[1]; //second smallest
 }
 
-const value = bubble_sort([5, 2, 6, 8, -1]);
+const value = second_smallest([5, 2, 6, 8, -1]);
 console.log(value);
